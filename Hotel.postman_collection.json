@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "0dba95d6-52ed-4fd3-b0b5-33d7a8059284",
+		"name": "Hotel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/hotels",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/hotels",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hotels"
+					]
+				},
+				"description": "list all Hotel"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/hotels",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/room?index=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room"
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/room?index=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/room?index=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"room"
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Add a room to a hotel, index is the position of the hotel"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/book-room?index=1&room=0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book-room?index=1&room=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book-room"
+					],
+					"query": [
+						{
+							"key": "index",
+							"value": "1"
+						},
+						{
+							"key": "room",
+							"value": "0"
+						}
+					]
+				},
+				"description": "Book a room in a hotel, index is the position of the hotel, and room is the index of the room"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/newhotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nameofHotel\": \"test\",\r\n    \"theAmountOfRooms\" : 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/newhotel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"newhotel"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
